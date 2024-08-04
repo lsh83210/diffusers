@@ -465,6 +465,7 @@ class BasicTransformerBlock(nn.Module):
             attn_output = gate_msa * attn_output
 
         hidden_states = attn_output + hidden_states
+        print(hidden_states,attn_output)
         if hidden_states.ndim == 4:
             hidden_states = hidden_states.squeeze(1)
 
